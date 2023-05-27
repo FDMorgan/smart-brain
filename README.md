@@ -5,5 +5,5 @@ You can either login with admin@gmail.com with the password test or make your ow
 
 ## Things to improve
 + Add sessions for persistent user login
-+ Ability to detect multiple faces instead of just one
++ ~~Ability to detect multiple faces instead of just one~~ : Done!
 + Expand user profile system
