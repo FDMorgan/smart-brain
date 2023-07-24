@@ -27,7 +27,7 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('https://smart-brain-api-docker.onrender.com/register', {
+    fetch('https://smart-brain-api-0k81.onrender.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -40,7 +40,7 @@ class Register extends React.Component {
       .then(data => {
         if (data.userId && data.success === 'true') {
           this.saveAuthTokenInSession(data.token)
-          fetch(`https://smart-brain-api-docker.onrender.com/profile/${data.userId}`, {
+          fetch(`https://smart-brain-api-0k81.onrender.com/profile/${data.userId}`, {
             method: 'get',
             headers: {
               'Content-Type': 'application/json',

@@ -38,7 +38,7 @@ class App extends Component {
   componentDidMount() {
     const token = window.sessionStorage.getItem('token')
     if(token) {
-      fetch('https://smart-brain-api-docker.onrender.com/signin', {
+      fetch('https://smart-brain-api-0k81.onrender.com/signin', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ class App extends Component {
       .then(resp => resp.json())
       .then(data => {
         if(data && data.id) {
-          fetch(`https://smart-brain-api-docker.onrender.com/profile/${data.id}`, {
+          fetch(`https://smart-brain-api-0k81.onrender.com/profile/${data.id}`, {
             method: 'get',
             headers: {
               'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://smart-brain-api-docker.onrender.com/imageurl', {
+      fetch('https://smart-brain-api-0k81.onrender.com/imageurl', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://smart-brain-api-docker.onrender.com/image', {
+          fetch('https://smart-brain-api-0k81.onrender.com/image', {
             method: 'put',
             headers: {
               'Content-Type': 'application/json',
